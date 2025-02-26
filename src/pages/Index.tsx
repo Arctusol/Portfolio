@@ -3,6 +3,33 @@ import { useEffect, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import * as THREE from "three";
 
+const projects = [
+  {
+    title: "Medical Analysis",
+    description: "Plateforme d'analyse médicale développée avec Streamlit, facilitant l'interprétation des données médicales pour les professionnels de santé.",
+    link: "https://medicalanalysis.azurewebsites.net",
+    tech: ["Streamlit", "Python", "Azure"],
+  },
+  {
+    title: "Photomad",
+    description: "Application web permettant aux utilisateurs de partager et de découvrir des photographies, mettant en avant une communauté de passionnés.",
+    link: "https://photomad-web.azurewebsites.net",
+    tech: ["React", "Azure", "Node.js"],
+  },
+  {
+    title: "Tracking Budget",
+    description: "Outil de gestion budgétaire personnel avec intégration Azure Document pour l'analyse des relevés bancaires et tickets de caisse.",
+    link: "https://tracking-budget-ten.vercel.app/auth",
+    tech: ["React", "Azure", "Document AI"],
+  },
+  {
+    title: "Mac-P'AI",
+    description: "Plateforme proposant des agents autonomes pour automatiser les tâches et optimiser les processus décisionnels en temps réel.",
+    link: "https://mac-pai.com",
+    tech: ["Python", "Autogen", "CrewAI"],
+  },
+];
+
 const Index = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -92,6 +119,45 @@ const Index = () => {
           >
             Découvrir mes projets
           </a>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="section-padding">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">
+            Projets Récents
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <a
+                key={index}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <div className="h-full p-6 rounded-xl card-gradient backdrop-blur-sm border border-white/10 transition-all duration-300 hover:border-neon/50 hover:shadow-lg hover:shadow-neon/5">
+                  <h3 className="text-xl font-semibold mb-3 text-neon group-hover:translate-x-1 transition-transform">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 text-sm rounded-full bg-white/5 border border-white/10"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
     </div>
