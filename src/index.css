@@ -9,10 +9,11 @@
   :root {
     --background: 0 0% 4%;
     --foreground: 0 0% 100%;
+    --border: 0 0% 20%;
   }
   
   * {
-    @apply border-border selection:bg-neon/20 selection:text-neon;
+    @apply selection:bg-neon/20 selection:text-neon;
   }
   
   html {
