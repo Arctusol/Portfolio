@@ -5,6 +5,7 @@ import Index from './pages/Index';
 import NotFound from './pages/NotFound';
 import { initializeGA } from './hooks/useAnalytics';
 import Head from './components/common/Head';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
+      <Analytics />
     </HelmetProvider>
   );
 }
