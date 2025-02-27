@@ -1,69 +1,88 @@
-# Welcome to your Lovable project
+# 🚀 Portfolio Spatial Interactif
 
-## Project info
+<div align="center">
+  <img alt="Badge Version" src="https://img.shields.io/badge/version-1.0.0-blue">
+  <img alt="Badge Tech" src="https://img.shields.io/badge/tech-React-61dafb">
+  <img alt="Badge Three.js" src="https://img.shields.io/badge/three.js-black?logo=three.js">
+  <img alt="Badge TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white">
+</div>
 
-**URL**: https://lovable.dev/projects/78c4a74d-d851-4b4a-a8f6-6fc37d67fcb8
+Une expérience immersive dans l'univers de mes compétences et projets numériques.
 
-## How can I edit this code?
+## 🌌 Aperçu
 
-There are several ways of editing your application.
+Ce portfolio interactif vous invite à explorer mon univers professionnel à travers une interface futuriste et immersive. Naviguez entre mes projets et compétences dans un environnement spatial généré avec Three.js, où chaque section révèle une nouvelle dimension de mon expertise en IA générative et analyse de données.
 
-**Use Lovable**
+## ✨ Fonctionnalités
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/78c4a74d-d851-4b4a-a8f6-6fc37d67fcb8) and start prompting.
+- 🌠 Animation 3D spatiale - Un arrière-plan interactif généré avec Three.js
+- 🔮 Interface glassmorphique - Design moderne avec effets de transparence et blur
+- 📱 Entièrement responsive - Expérience fluide sur tous les appareils
+- 🎭 Modales interactives - Présentation détaillée des projets
+- 🌈 Animations fluides - Transitions et effets visuels élégants
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Technologies
 
-**Use your preferred IDE**
+Ce portfolio spatial est construit avec un stack moderne :
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Framework** : React avec TypeScript
+- **Build tool** : Vite
+- **Styling** : Tailwind CSS
+- **UI Components** : shadcn/ui (basé sur Radix UI)
+- **3D Rendering** : Three.js
+- **Animations** : CSS personnalisé et animations Three.js
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Installation
 
-Follow these steps:
+```bash
+# Cloner le repository
+git clone https://github.com/arctusol/interactive-portfolio-space.git
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Installer les dépendances
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Lancer le serveur de développement
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 📂 Structure du projet
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+interactive-portfolio-space/
+├── src/
+│   ├── components/     # Composants réutilisables
+│   ├── pages/         # Pages de l'application
+│   └── index.css      # Styles globaux
+├── public/            # Assets statiques
+└── tailwind.config.ts # Configuration Tailwind
+```
 
-**Use GitHub Codespaces**
+## 📊 Projets présentés
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Medical Analysis** - Plateforme d'analyse médicale avec IA
+- **Photomad** - Application communautaire de partage de photos
+- **MacPAI** - Système d'agents autonomes basé sur l'IA
+- **SpendWise** - Analyse vos relevés bancaires et tickets de caisse pour comprendre vos dépenses.
 
-## What technologies are used for this project?
+## 🔮 Roadmap
 
-This project is built with .
+- [ ] Nouvelles animations interactives
+- [ ] Mode clair/sombre
+- [ ] Blog intégré
+- [ ] Internationalisation
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🔧 Personnalisation
 
-## How can I deploy this project?
+Le portfolio peut être facilement personnalisé :
 
-Simply open [Lovable](https://lovable.dev/projects/78c4a74d-d851-4b4a-a8f6-6fc37d67fcb8) and click on Share -> Publish.
+- Modifier les projets dans `Index.tsx`
+- Ajuster les animations 3D dans le même fichier
+- Personnaliser les couleurs dans `index.css` et `tailwind.config.ts`
 
-## I want to use a custom domain - is that possible?
+## 📄 License
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+MIT
+
+---
+
+Développé avec 💙 et une pincée de poussière d'étoiles.
