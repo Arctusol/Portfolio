@@ -1,92 +1,87 @@
-
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import SocialLinks from './common/SocialLinks';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const menuItems = [
+    { href: '#projects', label: 'Projets' },
+    { href: '#services', label: 'Services' },
+    { href: '#skills', label: 'Compétences' },
+    { href: '#contact', label: 'Contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navItems = [
-    { name: "À propos", href: "#about" },
-    { name: "Projets", href: "#projects" },
-    { name: "Compétences", href: "#skills" },
-    { name: "Contact", href: "#contact" },
-  ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass py-4" : "py-6"
+        isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-white/10' : ''
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between">
-          <motion.a
-            href="#"
-            className="text-xl font-bold text-neon"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+        <div className="flex items-center justify-between h-16">
+          {/* Logo/Home Link */}
+          <Link
+            to="/"
+            className="text-xl font-bold hover:text-neon transition-colors"
           >
-            Portfolio
-          </motion.a>
+            AB
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <motion.a
-                key={item.name}
+            {menuItems.map((item) => (
+              <a
+                key={item.href}
                 href={item.href}
-                className="text-sm hover:text-neon transition-colors duration-300"
-                whileHover={{ y: -2 }}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
+                className="text-sm hover:text-neon transition-colors"
               >
-                {item.name}
-              </motion.a>
+                {item.label}
+              </a>
             ))}
+            <SocialLinks variant="header" />
           </div>
 
-          {/* Mobile Navigation */}
-          <button
-            className="md:hidden text-2xl"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X /> : <Menu />}
-          </button>
+          {/* Mobile Menu Button */}
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col gap-6">
+                {menuItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="block text-lg hover:text-neon transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <div className="pt-4 border-t border-white/10">
+                  <SocialLinks variant="sidebar" />
+                </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <motion.div
-            className="md:hidden absolute top-full left-0 right-0 glass"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <div className="py-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-6 py-3 text-sm hover:text-neon transition-colors duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
       </div>
     </nav>
   );
