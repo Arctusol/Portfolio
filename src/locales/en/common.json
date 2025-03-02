@@ -27,26 +27,238 @@
           "infrastructure": "Cloud Infrastructure",
           "containers": "Virtual Machines & Containers"
         }
+      },
+      "scraping": {
+        "title": "Data Scraping & Automation",
+        "description": "Data extraction and flow automation",
+        "features": {
+          "extraction": "Web Data Extraction",
+          "cleaning": "Data Cleaning & Processing",
+          "integration": "API Integration",
+          "automation": "Task Automation"
+        }
+      },
+      "data": {
+        "title": "Data Analysis & Visualization",
+        "description": "Business intelligence and data visualization solutions",
+        "features": {
+          "dashboards": "Interactive Dashboards",
+          "reports": "Automated Reports",
+          "visualizations": "Data Visualizations",
+          "kpis": "KPI Tracking & Analysis"
+        }
+      },
+      "ai": {
+        "title": "AI Solutions",
+        "description": "Custom AI solutions and integrations",
+        "features": {
+          "agents": "AI Agents & Assistants",
+          "voice": "Voice & Speech Solutions",
+          "automation": "AI-Powered Automation",
+          "decision": "Decision Support Systems"
+        }
+      },
+      "growth": {
+        "title": "Growth & Automation",
+        "description": "Business growth and process automation",
+        "features": {
+          "scraping": "Lead Generation",
+          "campaigns": "Marketing Campaigns",
+          "conversion": "Conversion Optimization",
+          "segmentation": "Customer Segmentation"
+        }
+      },
+      "crm": {
+        "title": "CRM & Project Management",
+        "description": "CRM implementation and optimization",
+        "features": {
+          "agile": "Agile Project Management",
+          "training": "Team Training",
+          "audit": "Process Audit",
+          "optimization": "Workflow Optimization"
+        }
       }
     }
   },
   "projects": {
-    "title": "My Latest Projects",
+    "title": "My latest projects",
     "description": "Discover my recent work and achievements",
+    "date": "Date",
     "categories": {
+      "title": "Categories",
       "data_analysis": "Data Analysis",
       "classification_and_interaction": "Classification & Interaction",
       "voicebot": "Voicebot",
       "data_scraping_automation": "Data Scraping & Automation",
       "specialized_ai_solutions": "Specialized AI Solutions"
     },
-    "view": "View Project",
-    "related": "Related Projects",
+    "view": "View project",
+    "related": "Related projects",
     "tech_stack": "Tech Stack",
     "features": "Features",
     "metrics": "Key Metrics",
     "live_demo": "Live Demo",
-    "source_code": "Source Code"
+    "source_code": "Source Code",
+    "medcap": {
+      "title": "MedCap",
+      "description": "Medical analysis platform developed with Streamlit, facilitating medical data interpretation for healthcare professionals.",
+      "longDescription": "A comprehensive platform enabling healthcare professionals to efficiently analyze and interpret medical data. Integration of AI models for decision support and early pathology detection.",
+      "images": {
+        "dashboard": {
+          "alt": "Main analysis dashboard",
+          "caption": "Main interface showing real-time analysis"
+        },
+        "detection": {
+          "alt": "Detection system",
+          "caption": "Interactive map for hospital data by region"
+        },
+        "analysis": {
+          "alt": "Main analysis dashboard",
+          "caption": "Main interface showing real-time analysis"
+        },
+        "evolution": {
+          "alt": "Pathology evolution",
+          "caption": "Graph showing pathology evolution over time"
+        }
+      },
+      "video": {
+        "caption": "Demonstration of LangChain and AI workflow"
+      },
+      "metrics": [
+        "Facilitates medical data analysis",
+        "Aids decision-making in medical units",
+        "Optimizes healthcare professionals' time",
+        "Improves bed occupancy rate"
+      ],
+      "features": [
+        "Automatic medical data analysis",
+        "Intuitive interface for professionals",
+        "Download generated detailed reports and graph",
+        "Chat with database-connected chatbot"
+      ]
+    },
+    "photomad": {
+      "title": "Photomad",
+      "description": "Web application enabling users to share and discover photographs, highlighting a community of enthusiasts.",
+      "longDescription": "A social platform dedicated to photography enthusiasts, offering advanced features for sharing, discovery, and interaction. Integration of image editing and analysis tools.",
+      "images": {
+        "upload": {
+          "alt": "Photo upload",
+          "caption": "Photo upload interface with AI-generated description"
+        },
+        "worldmap": {
+          "alt": "Interactive world map",
+          "caption": "Photo viewer with interactive map"
+        },
+        "backend": {
+          "alt": "FastAPI backend",
+          "caption": "Endpoint management interface"
+        }
+      },
+      "video": {
+        "caption": "Demonstration of Photomad navigation flow"
+      },
+      "metrics": [
+        "Historical photo sharing",
+        "AI analysis of photos for intelligent description generation",
+        "Fluid and intuitive interface for optimal user experience",
+        "Album creation and community sharing",
+        "Person and location identification in photos",
+        "Interactive world map"
+      ],
+      "features": [
+        "Photo upload and sharing",
+        "Integrated image editing",
+        "Automatic AI classification",
+        "Intelligent tagging system"
+      ]
+    },
+    "ai_call_bot": {
+      "title": "AI Call Bot",
+      "description": "Innovative automated prospecting solution using conversational AI and voice synthesis for natural and efficient calls.",
+      "longDescription": "Automated telephone prospecting platform combining cutting-edge technologies in conversational AI, voice synthesis, and voice recognition. The system enables natural and personalized interactions with prospects, optimizing the prospecting process while maintaining a human approach.",
+      "images": {
+        "dashboard": {
+          "alt": "Call management dashboard",
+          "caption": "Main campaign management interface"
+        },
+        "analytics": {
+          "alt": "Conversation analytics",
+          "caption": "Detailed performance analysis"
+        }
+      },
+      "metrics": [
+        "Automation of prospecting calls",
+        "Reduction in sales team workload",
+        "Automated prospect qualification",
+        "Time savings and cost reduction"
+      ],
+      "features": [
+        "Natural and fluid conversations in French",
+        "High-quality voice synthesis",
+        "Real-time voice recognition",
+        "Detailed analytics and reporting"
+      ]
+    },
+    "spendwise": {
+      "title": "SpendWise",
+      "description": "Personal budget management tool with Azure Document integration for analyzing bank statements and receipts.",
+      "longDescription": "Innovative personal financial management solution using AI to automate expense categorization and generate relevant insights on consumption habits.",
+      "images": {
+        "dashboard": {
+          "alt": "Main dashboard",
+          "caption": "Expenses overview"
+        },
+        "scan": {
+          "alt": "Receipt scanner",
+          "caption": "Scan and analysis interface"
+        }
+      },
+      "metrics": [
+        "Automated expense tracking",
+        "Intelligent categorization for better budget control",
+        "Trend analysis for optimizing personal finances",
+        "Intuitive interface facilitating daily use",
+        "OCR reading of receipts and bank statements"
+      ],
+      "features": [
+        "Automatic scanning of receipts and statements",
+        "Intelligent categorization",
+        "Trend analysis",
+        "Budget forecasting"
+      ]
+    },
+    "mac_pai": {
+      "title": "Mac-P'AI",
+      "description": "Platform offering autonomous agents to automate tasks and optimize real-time decision-making processes.",
+      "longDescription": "Advanced AI-based autonomous agent system capable of automating complex tasks and optimizing real-time decision-making processes. Integration of cutting-edge AI technologies.",
+      "images": {
+        "agents": {
+          "alt": "Agents view",
+          "caption": "Agent management interface"
+        },
+        "workspace": {
+          "alt": "Workspace creation",
+          "caption": "Information validation for workspace creation"
+        },
+        "tasks": {
+          "alt": "Task management",
+          "caption": "Orchestration dashboard"
+        }
+      },
+      "metrics": [
+        "Intelligent task automation",
+        "Real-time optimization for effective decision-making",
+        "Error reduction and productivity improvement",
+        "Advanced workflow management with intuitive interface"
+      ],
+      "features": [
+        "Autonomous AI agents",
+        "Task orchestration",
+        "Real-time optimization",
+        "Advanced control interface"
+      ]
+    }
   },
   "contact": {
     "title": "Contact",

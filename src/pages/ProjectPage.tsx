@@ -181,7 +181,7 @@ const ProjectPage = () => {
               <Card className="p-6 space-y-6 sticky top-28 bg-black/40 backdrop-blur-sm border-white/10">
                 <div>
                   <h3 className="text-sm font-medium text-gray-400 mb-2">
-                    {t('projects.categories')}
+                    {t('projects.categories.title')}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {project.categories.map((category, index) => (

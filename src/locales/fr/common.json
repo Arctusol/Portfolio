@@ -27,26 +27,238 @@
           "infrastructure": "Infrastructure Cloud",
           "containers": "Machines Virtuelles & Containers"
         }
+      },
+      "scraping": {
+        "title": "Data Scraping & Automatisation",
+        "description": "Extraction de données et automatisation de flux",
+        "features": {
+          "extraction": "Extraction de données web",
+          "cleaning": "Nettoyage et traitement des données",
+          "integration": "Intégration API",
+          "automation": "Automatisation des tâches"
+        }
+      },
+      "data": {
+        "title": "Analyse & Visualisation de données",
+        "description": "Solutions de business intelligence et visualisation de données",
+        "features": {
+          "dashboards": "Tableaux de bord interactifs",
+          "reports": "Rapports automatisés",
+          "visualizations": "Visualisations de données",
+          "kpis": "Suivi et analyse des KPIs"
+        }
+      },
+      "ai": {
+        "title": "Solutions IA",
+        "description": "Solutions et intégrations IA personnalisées",
+        "features": {
+          "agents": "Agents IA & Assistants",
+          "voice": "Solutions vocales",
+          "automation": "Automatisation par IA",
+          "decision": "Systèmes d'aide à la décision"
+        }
+      },
+      "growth": {
+        "title": "Croissance & Automatisation",
+        "description": "Croissance commerciale et automatisation des processus",
+        "features": {
+          "scraping": "Génération de leads",
+          "campaigns": "Campagnes marketing",
+          "conversion": "Optimisation des conversions",
+          "segmentation": "Segmentation client"
+        }
+      },
+      "crm": {
+        "title": "CRM & Gestion de projet",
+        "description": "Implémentation et optimisation CRM",
+        "features": {
+          "agile": "Gestion de projet Agile",
+          "training": "Formation des équipes",
+          "audit": "Audit des processus",
+          "optimization": "Optimisation des workflows"
+        }
       }
     }
   },
   "projects": {
     "title": "Mes derniers projets",
-    "description": "Découvrez mes réalisations récentes",
+    "description": "Découvrez mes travaux et réalisations récents",
+    "date": "Date",
     "categories": {
+      "title": "Catégories",
       "data_analysis": "Analyse de données",
       "classification_and_interaction": "Classification & Interaction",
       "voicebot": "Voicebot",
       "data_scraping_automation": "Data Scraping & Automatisation",
       "specialized_ai_solutions": "Solutions IA Spécialisées"
     },
-    "view": "Voir le Projet",
-    "related": "Projets Similaires",
-    "tech_stack": "Technologies Utilisées",
+    "view": "Voir le projet",
+    "related": "Projets similaires",
+    "tech_stack": "Technologies utilisées",
     "features": "Fonctionnalités",
-    "metrics": "Métriques Clés",
-    "live_demo": "Démo en Direct",
-    "source_code": "Code Source"
+    "metrics": "Métriques clés",
+    "live_demo": "Démo du projet",
+    "source_code": "Code Source",
+    "medcap": {
+      "title": "MedCap",
+      "description": "Plateforme d'analyse médicale développée avec Streamlit, facilitant l'interprétation des données médicales pour les professionnels de santé.",
+      "longDescription": "Une plateforme complète permettant aux professionnels de santé d'analyser et d'interpréter efficacement les données médicales. Intégration de modèles d'IA pour l'aide à la décision et la détection précoce de pathologies.",
+      "images": {
+        "dashboard": {
+          "alt": "Dashboard principal d'analyse",
+          "caption": "Interface principale montrant les analyses en temps réel"
+        },
+        "detection": {
+          "alt": "Système de détection",
+          "caption": "Carte interactive pour les données hospitalières par région"
+        },
+        "analysis": {
+          "alt": "Dashboard principal d'analyse",
+          "caption": "Interface principale montrant les analyses en temps réel"
+        },
+        "evolution": {
+          "alt": "Evolution des pathologies",
+          "caption": "Graphique montrant l'évolution des pathologies dans le temps"
+        }
+      },
+      "video": {
+        "caption": "Démonstration du flux de travail LangChain et IA"
+      },
+      "metrics": [
+        "Facilite l'analyse des données médicales",
+        "Aide à la prise de décision dans les unités médicales",
+        "Optimisation du temps des professionnels de santé",
+        "Amélioration du taux d'occupation des lits"
+      ],
+      "features": [
+        "Analyse automatique des données médicales",
+        "Interface intuitive pour les professionnels",
+        "Rapports détaillés générés automatiquement",
+        "Discussion avec un chatbot connecté à la base de données"
+      ]
+    },
+    "photomad": {
+      "title": "Photomad",
+      "description": "Application web permettant aux utilisateurs de partager et de découvrir des photographies, mettant en avant une communauté de passionnés.",
+      "longDescription": "Une plateforme sociale dédiée aux passionnés de photographie, offrant des fonctionnalités avancées de partage, de découverte et d'interaction. Intégration d'outils d'édition et d'analyse d'images.",
+      "images": {
+        "upload": {
+          "alt": "Ajout de photos",
+          "caption": "Interface d'ajout de photos avec description généré par IA"
+        },
+        "worldmap": {
+          "alt": "Carte du monde interactive",
+          "caption": "Visionneuse de photos avec carte interactive"
+        },
+        "backend": {
+          "alt": "Backend FastAPI",
+          "caption": "Interface de gestion des endpoints"
+        }
+      },
+      "video": {
+        "caption": "Démonstration du flow de navigation sur Photomad"
+      },
+      "metrics": [
+        "Partage de photos historiques",
+        "Analyse des clichés par IA pour une classification intelligente",
+        "Interface fluide et intuitive pour une expérience utilisateur optimale",
+        "Création d'albums et partage avec une communauté",
+        "Identification de personnes et lieux sur les photos",
+        "Carte du monde interactive"
+      ],
+      "features": [
+        "Upload et partage de photos",
+        "Édition d'image intégrée",
+        "Classification automatique par IA",
+        "Système de tags intelligent"
+      ]
+    },
+    "ai_call_bot": {
+      "title": "AI Call Bot",
+      "description": "Solution innovante de prospection automatisée utilisant l'IA conversationnelle et la synthèse vocale pour des appels naturels et efficaces.",
+      "longDescription": "Plateforme de prospection téléphonique automatisée combinant des technologies de pointe en IA conversationnelle, synthèse vocale et reconnaissance vocale. Le système permet des interactions naturelles et personnalisées avec les prospects, optimisant le processus de prospection tout en maintenant une approche humaine.",
+      "images": {
+        "dashboard": {
+          "alt": "Dashboard de gestion des appels",
+          "caption": "Interface principale de gestion des campagnes"
+        },
+        "analytics": {
+          "alt": "Analytics des conversations",
+          "caption": "Analyse détaillée des performances"
+        }
+      },
+      "metrics": [
+        "Automatisation des appels de prospection",
+        "Réduction de la charge de travail des commerciaux",
+        "Qualification automatisé des prospects",
+        "Gain de temps et réduction des coûts"
+      ],
+      "features": [
+        "Conversations naturelles et fluides en français",
+        "Synthèse vocale haute qualité",
+        "Reconnaissance vocale en temps réel",
+        "Analytics et reporting détaillé"
+      ]
+    },
+    "spendwise": {
+      "title": "SpendWise",
+      "description": "Outil de gestion budgétaire personnel avec intégration Azure Document pour l'analyse des relevés bancaires et tickets de caisse.",
+      "longDescription": "Solution innovante de gestion financière personnelle utilisant l'IA pour automatiser la catégorisation des dépenses et générer des insights pertinents sur les habitudes de consommation.",
+      "images": {
+        "dashboard": {
+          "alt": "Dashboard principal",
+          "caption": "Vue d'ensemble des dépenses"
+        },
+        "scan": {
+          "alt": "Scanner de tickets",
+          "caption": "Interface de scan et analyse"
+        }
+      },
+      "metrics": [
+        "Automatisation du suivi des dépenses",
+        "Catégorisation intelligente pour un meilleur contrôle budgétaire",
+        "Analyse des tendances pour optimiser les finances personnelles",
+        "Interface intuitive facilitant l'utilisation au quotidien",
+        "Lecture OCR des tickets de caisse et relevés bancaires"
+      ],
+      "features": [
+        "Scan automatique de tickets et relevés",
+        "Catégorisation intelligente",
+        "Analyse des tendances",
+        "Prévisions budgétaires"
+      ]
+    },
+    "mac_pai": {
+      "title": "Mac-P'AI",
+      "description": "Plateforme proposant des agents autonomes pour automatiser les tâches et optimiser les processus décisionnels en temps réel.",
+      "longDescription": "Système avancé d'agents autonomes basé sur l'IA, capable d'automatiser des tâches complexes et d'optimiser les processus de prise de décision en temps réel. Intégration de technologies d'IA de pointe.",
+      "images": {
+        "agents": {
+          "alt": "Vue des agents",
+          "caption": "Interface de gestion des agents"
+        },
+        "workspace": {
+          "alt": "Création d'un workspace",
+          "caption": "Validation des informations pour la création d'un workspace"
+        },
+        "tasks": {
+          "alt": "Gestion des tâches",
+          "caption": "Dashboard d'orchestration"
+        }
+      },
+      "metrics": [
+        "Automatisation intelligente des tâches",
+        "Optimisation en temps réel pour une prise de décision efficace",
+        "Réduction des erreurs et amélioration de la productivité",
+        "Gestion avancée des workflows avec une interface intuitive"
+      ],
+      "features": [
+        "Agents IA autonomes",
+        "Orchestration de tâches",
+        "Optimisation en temps réel",
+        "Interface de contrôle avancée"
+      ]
+    }
   },
   "contact": {
     "title": "Contact",

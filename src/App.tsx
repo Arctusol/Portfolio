@@ -9,7 +9,6 @@ import Head from './components/common/Head';
 import { Analytics } from '@vercel/analytics/react';
 import { LanguageProvider } from './contexts/LanguageContext';
 import LoadingTranslations from './components/common/LoadingTranslations';
-import { LanguageTest } from './components/common/LanguageTest';
 import { useLanguage } from './contexts/LanguageContext';
 import './i18n';
 
@@ -28,7 +27,7 @@ const RoutesWithLanguage = () => {
         <Route path="/projects/:slug" element={<ProjectPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      {process.env.NODE_ENV === 'development' && <LanguageTest />}
+      {process.env.NODE_ENV === 'development'}
     </>
   );
 };

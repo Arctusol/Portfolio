@@ -5,12 +5,27 @@ import { Project, TranslatedProject } from '@/types/project';
 export const useProjects = () => {
   const { t } = useTranslation();
 
-  const translateProject = (project: Project): TranslatedProject => ({
-    ...project,
-    title: t(project.titleKey || project.title),
-    description: t(project.descriptionKey || project.description),
-    longDescription: t(project.longDescriptionKey || project.longDescription),
-  });
+  const translateProject = (project: Project): TranslatedProject => {
+    // Get base translations
+    const translatedProject = {
+      ...project,
+      title: t(project.titleKey),
+      description: t(project.descriptionKey),
+      longDescription: t(project.longDescriptionKey),
+    } as TranslatedProject;
+
+    // Translate metrics if keys are provided
+    if (project.metricsKeys) {
+      translatedProject.metrics = project.metricsKeys.map(key => t(key));
+    }
+
+    // Translate features if keys are provided
+    if (project.featuresKeys && project.features) {
+      translatedProject.features = project.featuresKeys.map(key => t(key));
+    }
+
+    return translatedProject;
+  };
 
   const getTranslatedProjects = () => {
     return projectsData.map(translateProject);
@@ -37,7 +52,7 @@ export const useProjects = () => {
   };
 
   const translateCategory = (category: string): string => {
-    return t(`projects.categories.${category.toLowerCase().replace(/\s+/g, '_')}`);
+    return t(`projects.categories.${category}`);
   };
 
   return {
