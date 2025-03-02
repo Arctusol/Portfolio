@@ -13,7 +13,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const { t } = useTranslation();
 
   return (
-    <Card className="group overflow-hidden border border-white/10 hover:border-neon hover:shadow-neon/20 hover:scale-[1.02] transition-all duration-300 relative flex flex-col h-full">
+    <Card className="group overflow-hidden border border-white/10 hover:border-neon hover:shadow-neon/20 hover:scale-[1.01] transition-all duration-300 relative flex flex-col h-full">
       <Link
         to={`/projects/${project.slug}`}
         className="block absolute inset-0 z-10"
@@ -24,9 +24,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <img
           src={project.coverImage}
           alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-10"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/20 to-transparent" />
         <div className="absolute top-4 right-4 flex flex-wrap gap-2 justify-end">
           {project.categories.map((category, index) => (
             <Badge 

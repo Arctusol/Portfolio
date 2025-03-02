@@ -139,8 +139,8 @@
     },
     "photomad": {
       "title": "Photomad",
-      "description": "Web application enabling users to share and discover photographs, highlighting a community of enthusiasts.",
-      "longDescription": "A social platform dedicated to photography enthusiasts, offering advanced features for sharing, discovery, and interaction. Integration of image editing and analysis tools.",
+      "description": "Webapp enabling users to share and discover historical photographs, highlighting a community of enthusiasts.",
+      "longDescription": "A social platform dedicated to historicaal photography enthusiasts, offering advanced features for sharing, discovery, and interaction. IA for image description generation.",
       "images": {
         "upload": {
           "alt": "Photo upload",
@@ -159,7 +159,6 @@
         "caption": "Demonstration of Photomad navigation flow"
       },
       "metrics": [
-        "Historical photo sharing",
         "AI analysis of photos for intelligent description generation",
         "Fluid and intuitive interface for optimal user experience",
         "Album creation and community sharing",

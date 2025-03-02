@@ -27,7 +27,7 @@ const ProjectsSection = () => {
           </Badge>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10 px-4 lg:px-8 xl:px-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 xl:gap-10 px-4 lg:px-8 xl:px-12">
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}
