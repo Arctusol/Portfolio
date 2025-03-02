@@ -1,14 +1,20 @@
-import { useState } from 'react';
-import SectionLayout from '../common/SectionLayout';
-import PracticalSkillsView from './skills/PracticalSkillsView';
-import InteractiveSkillsView from './skills/InteractiveSkillsView';
-import { skillsData } from '../../data/skills';
-import { hierarchicalSkills, generateLinks, HierarchicalSkill } from '../../data/skills-hierarchy';
+import { useState, useEffect } from 'react';
+import SectionLayout from '../../common/SectionLayout';
+import PracticalSkillsView from './PracticalSkillsView';
+import InteractiveSkillsView from './InteractiveSkillsView';
+import { skillsData } from '../../../data/skills';
+import {
+  hierarchicalSkills,
+  generateLinks,
+  HierarchicalSkill,
+} from '../../../data/skills-hierarchy';
 
 const SkillsSection = () => {
   const [activeView, setActiveView] = useState<'practical' | 'interactive'>('practical');
-  const [expandedNodes, setExpandedNodes] = useState<string[]>(['Backend', 'Frontend', 'LLM']);
+  const [expandedNodes, setExpandedNodes] = useState<string[]>(['Backend', 'Frontend', 'AI']);
   const [isAllExpanded, setIsAllExpanded] = useState(false);
+  const [visibleNodes, setVisibleNodes] = useState<HierarchicalSkill[]>([]);
+  const [visibleLinks, setVisibleLinks] = useState<any[]>([]);
 
   // Fonction récursive pour obtenir tous les nœuds visibles
   const getVisibleNodes = (skills: HierarchicalSkill[]): HierarchicalSkill[] => {
@@ -37,7 +43,8 @@ const SkillsSection = () => {
   };
 
   const toggleNode = (nodeId: string) => {
-    setExpandedNodes(prev => 
+    console.log('Toggling node:', nodeId);
+    setExpandedNodes(prev =>
       prev.includes(nodeId)
         ? prev.filter(id => id !== nodeId)
         : [...prev, nodeId]
@@ -46,15 +53,23 @@ const SkillsSection = () => {
 
   const toggleAllNodes = () => {
     if (isAllExpanded) {
-      setExpandedNodes(['Backend', 'Frontend', 'LLM']);
+      setExpandedNodes(['Backend', 'Frontend', 'AI']);
     } else {
       setExpandedNodes(getAllNodeIds(hierarchicalSkills));
     }
     setIsAllExpanded(!isAllExpanded);
   };
 
-  const visibleNodes = getVisibleNodes(hierarchicalSkills);
-  const visibleLinks = generateLinks(visibleNodes);
+  useEffect(() => {
+    const nodes = getVisibleNodes(hierarchicalSkills);
+    const links = generateLinks(nodes);
+    
+    console.log('Visible nodes:', nodes.map(n => n.id));
+    console.log('Generated links:', links.map(l => `${l.source} -> ${l.target}`));
+    
+    setVisibleNodes(nodes);
+    setVisibleLinks(links);
+  }, [expandedNodes]);
 
   return (
     <SectionLayout
@@ -77,7 +92,7 @@ const SkillsSection = () => {
           </button>
           <button
             onClick={() => setActiveView('interactive')}
-            className={`px-4 py-2 rounded-lg transition-colors ${
+            className={`px-4 py-2 rounded-lg transition.90n-colors ${
               activeView === 'interactive'
                 ? 'bg-neon text-black'
                 : 'bg-white/10 hover:bg-white/20'
@@ -86,7 +101,7 @@ const SkillsSection = () => {
             Vue interactive
           </button>
         </div>
-        
+
         {activeView === 'interactive' && (
           <div className="flex justify-center space-x-4">
             <button

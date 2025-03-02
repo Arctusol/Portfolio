@@ -1,7 +1,6 @@
 import { Github, Linkedin, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
-import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 interface SocialLinksProps {
@@ -49,17 +48,21 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
           </Button>
         </HoverCardTrigger>
         {showPreviews && (
-          <HoverCardContent align="end" className="w-80">
+          <HoverCardContent
+            align="end"
+            className="w-80 bg-black/80 backdrop-blur-md border border-white/10 shadow-xl"
+          >
             <div className="flex justify-between space-x-4">
               <div className="space-y-1">
-                <h4 className="text-sm font-semibold">@{githubInfo.username}</h4>
-                <p className="text-sm text-gray-400">
-                  Expert en IA & Data Science
+                <h4 className="text-sm font-semibold text-white">@{githubInfo.username}</h4>
+                <p className="text-sm text-gray-200">
+                  Expert en IA & Data Analyse
                 </p>
                 <div className="flex items-center gap-2">
                   <Badge variant="outline">Python</Badge>
                   <Badge variant="outline">React</Badge>
-                  <Badge variant="outline">TypeScript</Badge>
+                  <Badge variant="outline">FastAPI</Badge>
+                  <Badge variant="outline">IA</Badge>
                 </div>
               </div>
             </div>
@@ -67,7 +70,7 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full"
+                className="w-full hover:bg-white/10 transition-colors border-white/20 text-white"
                 asChild
               >
                 <a
@@ -106,11 +109,14 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
           </Button>
         </HoverCardTrigger>
         {showPreviews && (
-          <HoverCardContent align="end" className="w-80">
+          <HoverCardContent
+            align="end"
+            className="w-80 bg-black/80 backdrop-blur-md border border-white/10 shadow-xl"
+          >
             <div className="flex justify-between space-x-4">
               <div className="space-y-1">
-                <h4 className="text-sm font-semibold">Antonin Bourdelle</h4>
-                <p className="text-sm text-gray-400">
+                <h4 className="text-sm font-semibold text-white">Antonin Bourdelle</h4>
+                <p className="text-sm text-gray-200">
                   Expert en IA Générative & Data Science | Automatisation & Analyse de Données
                 </p>
                 <div className="flex flex-col gap-2">
@@ -130,7 +136,7 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full"
+                className="w-full hover:bg-white/10 transition-colors border-white/20 text-white"
                 asChild
               >
                 <a

@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 interface SectionLayoutProps {
   id: string;
   title: string;
+  description?: string;
   children: ReactNode;
   className?: string;
   backgroundClass?: string;
@@ -11,16 +12,24 @@ interface SectionLayoutProps {
 const SectionLayout = ({
   id,
   title,
+  description,
   children,
   className = '',
   backgroundClass = ''
 }: SectionLayoutProps) => {
   return (
     <section id={id} className={`section-padding ${backgroundClass}`}>
-      <div className={`container mx-auto ${className}`}>
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center fade-in">
-          {title}
-        </h2>
+      <div className={`w-full mx-auto ${className}`}>
+        <div className="text-center mb-12 fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {title}
+          </h2>
+          {description && (
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              {description}
+            </p>
+          )}
+        </div>
         {children}
       </div>
     </section>
