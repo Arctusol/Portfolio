@@ -1,0 +1,88 @@
+{
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "services": "Services",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Digital & Innovative Solutions",
+    "subtitle": "Expert in Data Analysis, Generative AI & Automation",
+    "cta": {
+      "services": "Discover my services",
+      "contact": "Contact me"
+    }
+  },
+  "services": {
+    "title": "My Services",
+    "description": "Explore my range of services and expertise",
+    "list": {
+      "cloud": {
+        "title": "Azure Cloud Solutions",
+        "description": "Implementation and management of Azure cloud solutions",
+        "features": {
+          "webapps": "Azure Web Apps & Functions",
+          "cognitive": "Cognitive Services & OCR",
+          "infrastructure": "Cloud Infrastructure",
+          "containers": "Virtual Machines & Containers"
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "My Latest Projects",
+    "description": "Discover my recent work and achievements",
+    "categories": {
+      "data_analysis": "Data Analysis",
+      "classification_and_interaction": "Classification & Interaction",
+      "voicebot": "Voicebot",
+      "data_scraping_automation": "Data Scraping & Automation",
+      "specialized_ai_solutions": "Specialized AI Solutions"
+    },
+    "view": "View Project",
+    "related": "Related Projects",
+    "tech_stack": "Tech Stack",
+    "features": "Features",
+    "metrics": "Key Metrics",
+    "live_demo": "Live Demo",
+    "source_code": "Source Code"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Let's work together on your next project",
+    "social": {
+      "linkedin": "Let's connect on LinkedIn to discuss your project",
+      "github": "Discover my projects on GitHub",
+      "consultation": {
+        "title": "Let's have a call",
+        "description": "Book a free 30-minute call to discuss your needs and explore possible solutions",
+        "cta": "Schedule a free call?"
+      }
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "subject_placeholder": "Select a service or topic",
+      "message_placeholder": "Tell me about your project...",
+      "other_subject": "Other topic",
+      "success": {
+        "title": "Message sent!",
+        "message": "I'll get back to you as soon as possible."
+      },
+      "error": {
+        "title": "Error",
+        "message": "An error occurred while sending your message."
+      }
+    }
+  },
+  "language": {
+    "select": "Select Language",
+    "en": "English",
+    "fr": "French"
+  }
+}

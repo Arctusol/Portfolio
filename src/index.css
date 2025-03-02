@@ -14,6 +14,18 @@
   
   * {
     @apply selection:bg-neon/20 selection:text-neon;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Allow text selection only on form elements and specific content areas */
+  input, textarea, [contenteditable="true"], .selectable {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
   }
   
   html {
@@ -22,6 +34,15 @@
 
   body {
     @apply min-h-screen font-body leading-relaxed;
+  }
+
+  /* Prevent text selection on clickable elements */
+  a, button, [role="button"], .clickable {
+    @apply select-none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }
 

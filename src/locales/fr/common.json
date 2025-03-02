@@ -1,0 +1,88 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "services": "Services",
+    "skills": "Compétences",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Solutions Digitales & Innovantes",
+    "subtitle": "Expert en Data Analyse, IA Générative & Automatisation",
+    "cta": {
+      "services": "Découvrir mes services",
+      "contact": "Me contacter"
+    }
+  },
+  "services": {
+    "title": "Mes services",
+    "description": "Découvrez ma gamme de services et mon expertise",
+    "list": {
+      "cloud": {
+        "title": "Solutions Cloud Azure",
+        "description": "Implémentation et gestion de solutions cloud Azure",
+        "features": {
+          "webapps": "Azure Web Apps & Functions",
+          "cognitive": "Services Cognitifs & OCR",
+          "infrastructure": "Infrastructure Cloud",
+          "containers": "Machines Virtuelles & Containers"
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "Mes derniers projets",
+    "description": "Découvrez mes réalisations récentes",
+    "categories": {
+      "data_analysis": "Analyse de données",
+      "classification_and_interaction": "Classification & Interaction",
+      "voicebot": "Voicebot",
+      "data_scraping_automation": "Data Scraping & Automatisation",
+      "specialized_ai_solutions": "Solutions IA Spécialisées"
+    },
+    "view": "Voir le Projet",
+    "related": "Projets Similaires",
+    "tech_stack": "Technologies Utilisées",
+    "features": "Fonctionnalités",
+    "metrics": "Métriques Clés",
+    "live_demo": "Démo en Direct",
+    "source_code": "Code Source"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Travaillons ensemble sur votre prochain projet",
+    "social": {
+      "linkedin": "Connectons nous sur LinkedIn pour échanger sur votre projet",
+      "github": "Découvrir mes projets sur GitHub",
+      "consultation": {
+        "title": "Échangeons par téléphone",
+        "description": "Réservez un appel de 30 minutes pour discuter de vos besoins et explorer les solutions possibles",
+        "cta": "On s'organise un appel gratuit ?"
+      }
+    },
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "subject_placeholder": "Sélectionnez un service ou un sujet",
+      "message_placeholder": "Parlez-moi de votre projet...",
+      "other_subject": "Autre sujet",
+      "success": {
+        "title": "Message envoyé !",
+        "message": "Je vous répondrai dans les plus brefs délais."
+      },
+      "error": {
+        "title": "Erreur",
+        "message": "Une erreur est survenue lors de l'envoi du message."
+      }
+    }
+  },
+  "language": {
+    "select": "Sélectionner la langue",
+    "en": "Anglais",
+    "fr": "Français"
+  }
+}
