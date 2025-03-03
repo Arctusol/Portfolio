@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import SocialLinks from './common/SocialLinks';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { ThemeToggle } from './ThemeToggle';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -78,6 +79,7 @@ const Navigation = () => {
             )}
             <div className="flex items-center gap-4">
               <LanguageSwitcher />
+              <ThemeToggle />
               <SocialLinks variant="header" />
             </div>
           </div>
@@ -98,6 +100,7 @@ const Navigation = () => {
                 <div className="pt-4 border-t border-white/10">
                   <div className="flex items-center gap-4 mb-4">
                     <LanguageSwitcher />
+                    <ThemeToggle />
                   </div>
                   <SocialLinks variant="sidebar" />
                 </div>

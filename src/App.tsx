@@ -8,8 +8,10 @@ import { initializeGA } from './hooks/useAnalytics';
 import Head from './components/common/Head';
 import { Analytics } from '@vercel/analytics/react';
 import { LanguageProvider } from './contexts/LanguageContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import LoadingTranslations from './components/common/LoadingTranslations';
 import { useLanguage } from './contexts/LanguageContext';
+import { Toaster } from "@/components/ui/toaster";
 import './i18n';
 
 // Wrap routes with language loading state
@@ -38,19 +40,22 @@ function App() {
   }, []);
 
   return (
-    <LanguageProvider>
-      <HelmetProvider>
-        <Router>
-          {/* Base SEO for all pages */}
-          <Head />
-          
-          <Suspense fallback={<LoadingTranslations />}>
-            <RoutesWithLanguage />
-          </Suspense>
-        </Router>
-        <Analytics />
-      </HelmetProvider>
-    </LanguageProvider>
+    <ThemeProvider>
+      <LanguageProvider>
+        <HelmetProvider>
+          <Router>
+            {/* Base SEO for all pages */}
+            <Head />
+            
+            <Suspense fallback={<LoadingTranslations />}>
+              <RoutesWithLanguage />
+            </Suspense>
+          </Router>
+          <Analytics />
+          <Toaster />
+        </HelmetProvider>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 

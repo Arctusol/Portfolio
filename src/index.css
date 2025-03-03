@@ -7,9 +7,61 @@
 
 @layer base {
   :root {
+    /* Dark theme (default) */
     --background: 0 0% 4%;
+    --background-alt: 0 0% 6%;
+    --background-alt2: 0 0% 8%;
     --foreground: 0 0% 100%;
     --border: 0 0% 20%;
+    --card-rgb: 255, 255, 255;
+    --muted: 0 0% 60%;
+    --neon: 164 100% 50%;
+    --neon-muted: 164 100% 35%;
+
+    /* Form elements - Dark theme */
+    --input-bg: 0 0% 10%;
+    --input-border: 0 0% 20%;
+    --input-focus: 164 100% 50%;
+    --input-text: 0 0% 100%;
+    --dropdown-bg: 0 0% 12%;
+    --dropdown-hover: 0 0% 16%;
+
+    /* Base transitions for theme switching */
+    --theme-transition: background-color 0.3s ease-in-out,
+                      border-color 0.3s ease-in-out,
+                      color 0.3s ease-in-out,
+                      box-shadow 0.3s ease-in-out;
+  }
+
+  :root.light {
+    --background: 0 0% 98%;
+    --background-alt: 0 0% 96%;
+    --background-alt2: 0 0% 94%;
+    --foreground: 240 10% 3.9%;
+    --border: 240 5.9% 90%;
+    --card-rgb: 0, 0, 0;
+    --muted: 240 3.8% 46.1%;
+    --neon: 164 84% 39%;
+    --neon-muted: 164 84% 29%;
+
+    /* Form elements - Light theme */
+    --input-bg: 0 0% 100%;
+    --input-border: 240 5.9% 90%;
+    --input-focus: 164 84% 39%;
+    --input-text: 240 10% 3.9%;
+    --dropdown-bg: 0 0% 100%;
+    --dropdown-hover: 240 5% 96%;
+  }
+
+  /* Apply transitions to common elements */
+  body,
+  button,
+  a,
+  input,
+  textarea,
+  .glass,
+  .card-gradient {
+    transition: var(--theme-transition);
   }
   
   * {
@@ -48,7 +100,14 @@
 
 @layer components {
   .glass {
-    @apply backdrop-blur-lg bg-white/5 border border-white/10;
+    @apply backdrop-blur-lg border transition-all;
+    background: rgba(var(--card-rgb), 0.05);
+    border-color: rgba(var(--card-rgb), 0.1);
+  }
+
+  :root.light .glass {
+    background: rgba(var(--card-rgb), 0.02);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
   
   .section-padding {
@@ -64,6 +123,16 @@
   }
 
   .card-gradient {
-    @apply bg-gradient-to-br from-white/10 to-transparent;
+    @apply bg-gradient-to-br transition-all;
+    --from-opacity: 0.1;
+    --to-opacity: 0;
+    background-image: linear-gradient(to bottom right,
+      rgba(var(--card-rgb), var(--from-opacity)),
+      rgba(var(--card-rgb), var(--to-opacity)));
+  }
+
+  :root.light .card-gradient {
+    --from-opacity: 0.05;
+    --to-opacity: 0;
   }
 }

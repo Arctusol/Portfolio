@@ -10,23 +10,23 @@ const SocialContactInfo = () => {
     <div className="mb-12 space-y-8">
       <div className="grid gap-6 md:grid-cols-3">
         {/* Social Links */}
-        <div className="flex flex-col items-center gap-4 p-6 rounded-lg bg-white/5 border border-white/10">
+        <div className="flex flex-col items-center gap-4 p-6 rounded-lg bg-input-bg border border-input-border">
           <div className="flex items-center gap-4">
             <SocialLinks variant="header" showPreviews={true} />
           </div>
           <div className="space-y-5 text-center">
-            <p className="text-sm text-white/80">{t('contact.social.linkedin')}</p>
-            <p className="text-sm text-white/80">{t('contact.social.github')}</p>
+            <p className="text-sm text-muted">{t('contact.social.linkedin')}</p>
+            <p className="text-sm text-muted">{t('contact.social.github')}</p>
           </div>
         </div>
 
         {/* Phone Consultation */}
-        <div className="md:col-span-2 flex flex-col justify-between p-6 rounded-lg bg-white/5 border border-white/10">
+        <div className="md:col-span-2 flex flex-col justify-between p-6 rounded-lg bg-input-bg border border-input-border">
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-white">
+            <h3 className="text-xl font-semibold text-foreground">
               {t('contact.social.consultation.title')}
             </h3>
-            <p className="text-white/80">
+            <p className="text-muted">
               {t('contact.social.consultation.description')}
             </p>
           </div>

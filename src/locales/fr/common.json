@@ -90,7 +90,7 @@
       "classification_and_interaction": "Classification & Interaction",
       "voicebot": "Voicebot",
       "data_scraping_automation": "Data Scraping & Automatisation",
-      "specialized_ai_solutions": "Solutions IA Spécialisées"
+      "specialized_ai_solutions": "Solutions IA spécialisées"
     },
     "view": "Voir le projet",
     "related": "Projets similaires",
@@ -282,8 +282,8 @@
       "message_placeholder": "Parlez-moi de votre projet...",
       "other_subject": "Autre sujet",
       "success": {
-        "title": "Message envoyé !",
-        "message": "Je vous répondrai dans les plus brefs délais."
+        "title": "Message bien reçu !",
+        "message": "Je vous reviens vers vous au plus vite."
       },
       "error": {
         "title": "Erreur",

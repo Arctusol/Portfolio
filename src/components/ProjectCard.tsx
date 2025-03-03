@@ -13,7 +13,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const { t } = useTranslation();
 
   return (
-    <Card className="group overflow-hidden border border-white/10 hover:border-neon hover:shadow-neon/20 hover:scale-[1.01] transition-all duration-300 relative flex flex-col h-full">
+    <Card className="group overflow-hidden border border-input-border bg-input-bg hover:border-neon hover:shadow-neon/20 hover:scale-[1.01] transition-all duration-300 relative flex flex-col h-full">
       <Link
         to={`/projects/${project.slug}`}
         className="block absolute inset-0 z-10"
@@ -26,13 +26,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-10"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-background/10 to-transparent" />
         <div className="absolute top-4 right-4 flex flex-wrap gap-2 justify-end">
           {project.categories.map((category, index) => (
-            <Badge 
+            <Badge
               key={index}
-              variant="outline" 
-              className="border-neon/50 bg-black/50 backdrop-blur-sm"
+              variant="outline"
+              className="border-input-border bg-background/80 backdrop-blur-sm text-foreground"
             >
               {t(`projects.categories.${category.toLowerCase().replace(/\s+/g, '_')}`)}
             </Badge>
@@ -42,7 +42,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
       <div className="p-6 md:p-8 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-6">
-          <h3 className="text-xl md:text-2xl font-bold group-hover:text-neon transition-colors">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-neon transition-colors">
             {project.title}
           </h3>
           {project.link && (
@@ -50,7 +50,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full hover:bg-white/10 hover:text-neon hover:scale-110 transition-all duration-300 relative z-20"
+              className="p-2 rounded-full hover:bg-background-alt hover:text-neon hover:scale-110 transition-all duration-300 relative z-20"
               aria-label={`${t('projects.live_demo')} ${project.title}`}
             >
               <ExternalLink className="h-5 w-5" />
@@ -58,7 +58,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           )}
         </div>
 
-        <p className="text-gray-400 mb-6 text-base md:text-lg line-clamp-2">
+        <p className="text-muted mb-6 text-base md:text-lg line-clamp-2">
           {project.description}
         </p>
 
@@ -70,7 +70,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </div>
             <ul className="space-y-2">
               {project.metrics.slice(0, 2).map((metric, index) => (
-                <li key={index} className="text-sm md:text-base text-gray-400 flex items-start gap-2">
+                <li key={index} className="text-sm md:text-base text-muted flex items-start gap-2">
                   <span className="text-neon">•</span>
                   <span>{metric}</span>
                 </li>
@@ -84,7 +84,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             <Badge
               key={index}
               variant="secondary"
-              className="bg-white/5 hover:bg-white/10 transition-colors px-3 py-1 text-sm md:text-base"
+              className="bg-background-alt hover:bg-background-alt2 text-foreground transition-colors px-3 py-1 text-sm md:text-base"
             >
               {tech}
             </Badge>

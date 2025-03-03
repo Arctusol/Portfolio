@@ -33,7 +33,7 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full hover:bg-white/10"
+            className="rounded-full hover:bg-background-alt"
             asChild
           >
             <a
@@ -50,12 +50,12 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
         {showPreviews && (
           <HoverCardContent
             align="end"
-            className="w-80 bg-black/80 backdrop-blur-md border border-white/10 shadow-xl"
+            className="w-80 bg-background/80 backdrop-blur-md border border-input-border shadow-xl"
           >
             <div className="flex justify-between space-x-4">
               <div className="space-y-1">
-                <h4 className="text-sm font-semibold text-white">@{githubInfo.username}</h4>
-                <p className="text-sm text-gray-200">
+                <h4 className="text-sm font-semibold text-foreground">@{githubInfo.username}</h4>
+                <p className="text-sm text-muted">
                   Expert en IA & Data Analyse
                 </p>
                 <div className="flex items-center gap-2">
@@ -70,7 +70,7 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full hover:bg-white/10 transition-colors border-white/20 text-white"
+                className="w-full hover:bg-background-alt transition-colors border-input-border text-foreground"
                 asChild
               >
                 <a
@@ -94,7 +94,7 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full hover:bg-white/10"
+            className="rounded-full hover:bg-background-alt"
             asChild
           >
             <a
@@ -111,22 +111,22 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
         {showPreviews && (
           <HoverCardContent
             align="end"
-            className="w-80 bg-black/80 backdrop-blur-md border border-white/10 shadow-xl"
+            className="w-80 bg-background/80 backdrop-blur-md border border-input-border shadow-xl"
           >
             <div className="flex justify-between space-x-4">
               <div className="space-y-1">
-                <h4 className="text-sm font-semibold text-white">Antonin Bourdelle</h4>
-                <p className="text-sm text-gray-200">
+                <h4 className="text-sm font-semibold text-foreground">Antonin Bourdelle</h4>
+                <p className="text-sm text-muted">
                   Expert en IA Générative & Data Science | Automatisation & Analyse de Données
                 </p>
                 <div className="flex flex-col gap-2">
-                  <span className="text-sm">
+                  <span className="text-sm text-foreground">
                     🎯 Spécialisé en solutions IA & Data
                   </span>
-                  <span className="text-sm">
+                  <span className="text-sm text-foreground">
                     🌍 Expérience internationale
                   </span>
-                  <span className="text-sm">
+                  <span className="text-sm text-foreground">
                     💼 Projets innovants
                   </span>
                 </div>
@@ -136,7 +136,7 @@ const SocialLinks = ({ variant = 'header', showPreviews = true }: SocialLinksPro
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full hover:bg-white/10 transition-colors border-white/20 text-white"
+                className="w-full hover:bg-background-alt transition-colors border-input-border text-foreground"
                 asChild
               >
                 <a

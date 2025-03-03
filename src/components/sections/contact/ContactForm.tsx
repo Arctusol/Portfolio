@@ -1,11 +1,12 @@
 import { MessageSquare } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useToast } from "@/hooks/use-toast";
 import { EmailMessage } from '@/services/email/types';
 import { emailService } from '@/services/email/emailjs.service';
 import { useServices } from '@/data/services-data';
 import { CONTACT_INFO } from '@/config/contact';
+import { useSearchParams } from 'react-router-dom';
 import {
   Select,
   SelectContent,
@@ -18,6 +19,7 @@ const ContactForm = () => {
   const { t } = useTranslation();
   const { services } = useServices();
   const { toast } = useToast();
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState<EmailMessage>({
     name: '',
     email: '',
@@ -25,6 +27,17 @@ const ContactForm = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    // Check if service is specified in URL
+    const serviceParam = searchParams.get('service');
+    if (serviceParam) {
+      setFormData(prev => ({
+        ...prev,
+        subject: decodeURIComponent(serviceParam)
+      }));
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,7 +92,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder={CONTACT_INFO.cto.name}
-            className="w-full px-5 py-3 text-base lg:text-lg rounded-lg bg-white/5 border border-white/10 focus:border-neon focus:ring-1 focus:ring-neon outline-none transition-colors"
+            className="w-full px-5 py-3 text-base lg:text-lg rounded-lg bg-input-bg text-input-text border border-input-border focus:border-input-focus focus:ring-1 focus:ring-input-focus outline-none transition-colors"
           />
         </div>
         <div>
@@ -94,7 +107,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             placeholder={CONTACT_INFO.cto.email}
-            className="w-full px-5 py-3 text-base lg:text-lg rounded-lg bg-white/5 border border-white/10 focus:border-neon focus:ring-1 focus:ring-neon outline-none transition-colors"
+            className="w-full px-5 py-3 text-base lg:text-lg rounded-lg bg-input-bg text-input-text border border-input-border focus:border-input-focus focus:ring-1 focus:ring-input-focus outline-none transition-colors"
           />
         </div>
       </div>
@@ -104,22 +117,22 @@ const ContactForm = () => {
           {t('contact.form.subject')}
         </label>
         <Select value={formData.subject} onValueChange={handleSubjectChange}>
-          <SelectTrigger className="w-full px-5 py-3 text-base lg:text-lg rounded-lg bg-white/5 border border-white/10 focus:border-neon focus:ring-1 focus:ring-neon outline-none transition-colors">
+          <SelectTrigger className="w-full px-5 py-3 text-base lg:text-lg rounded-lg bg-input-bg text-input-text border border-input-border focus:border-input-focus focus:ring-1 focus:ring-input-focus outline-none transition-colors">
             <SelectValue placeholder={t('contact.form.subject_placeholder')} />
           </SelectTrigger>
-          <SelectContent className="bg-zinc-900 border border-white/10">
+          <SelectContent className="bg-dropdown-bg border border-input-border">
             {services.map((service, index) => (
-              <SelectItem 
-                key={index} 
+              <SelectItem
+                key={index}
                 value={service.title}
-                className="hover:bg-white/5 focus:bg-white/5"
+                className="text-input-text hover:bg-dropdown-hover focus:bg-dropdown-hover"
               >
                 {service.title}
               </SelectItem>
             ))}
-            <SelectItem 
+            <SelectItem
               value="other"
-              className="hover:bg-white/5 focus:bg-white/5"
+              className="text-input-text hover:bg-dropdown-hover focus:bg-dropdown-hover"
             >
               {t('contact.form.other_subject')}
             </SelectItem>
@@ -139,7 +152,7 @@ const ContactForm = () => {
           required
           rows={6}
           placeholder={t('contact.form.message_placeholder')}
-          className="w-full px-5 py-3 text-base lg:text-lg rounded-lg bg-white/5 border border-white/10 focus:border-neon focus:ring-1 focus:ring-neon outline-none transition-colors"
+          className="w-full px-5 py-3 text-base lg:text-lg rounded-lg bg-input-bg text-input-text border border-input-border focus:border-input-focus focus:ring-1 focus:ring-input-focus outline-none transition-colors"
         />
       </div>
 

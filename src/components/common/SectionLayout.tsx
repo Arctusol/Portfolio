@@ -25,7 +25,7 @@ const SectionLayout = ({
             {title}
           </h2>
           {description && (
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-muted max-w-2xl mx-auto">
               {description}
             </p>
           )}

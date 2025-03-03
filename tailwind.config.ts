@@ -22,15 +22,32 @@ export default {
       colors: {
         border: "hsl(var(--border))",
         background: "hsl(var(--background))",
+        "background-alt": "hsl(var(--background-alt))",
+        "background-alt2": "hsl(var(--background-alt2))",
         foreground: "hsl(var(--foreground))",
+        muted: "hsl(var(--muted))",
         neon: {
-          DEFAULT: "#00FFB9",
-          muted: "#00B383",
+          DEFAULT: "hsl(var(--neon))",
+          muted: "hsl(var(--neon-muted))"
+        },
+        input: {
+          bg: "hsl(var(--input-bg))",
+          border: "hsl(var(--input-border))",
+          focus: "hsl(var(--input-focus))",
+          text: "hsl(var(--input-text))"
+        },
+        dropdown: {
+          bg: "hsl(var(--dropdown-bg))",
+          hover: "hsl(var(--dropdown-hover))"
         },
         card: {
-          DEFAULT: "rgba(255, 255, 255, 0.05)",
-          hover: "rgba(255, 255, 255, 0.1)",
+          DEFAULT: "rgba(var(--card-rgb), 0.05)",
+          hover: "rgba(var(--card-rgb), 0.1)",
         },
+        glass: {
+          DEFAULT: "rgba(var(--card-rgb), 0.05)",
+          hover: "rgba(var(--card-rgb), 0.08)",
+        }
       },
       fontFamily: {
         sans: ["SF Pro Display", "system-ui", "sans-serif"],
