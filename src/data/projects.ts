@@ -199,12 +199,27 @@ export const projects: Project[] = [
         caption: "Vue d'ensemble des dépenses"
       },
       {
-        src: "/projects/tracking-budget/scan.png",
+        src: "/projects/tracking-budget/creation_group.png",
         altKey: "projects.spendwise.images.scan.alt",
         alt: "Scanner de tickets",
         captionKey: "projects.spendwise.images.scan.caption",
-        caption: "Interface de scan et analyse"
+        caption: "Interface de création de groupe"
+      },
+      {
+        src: "/projects/tracking-budget/budget.png",
+        altKey: "projects.spendwise.images.scan.alt",
+        alt: "Scanner de tickets",
+        captionKey: "projects.spendwise.images.scan.caption",
+        caption: "Plannification des budgets"
+      },
+      {
+        src: "/projects/tracking-budget/import_ticket.png",
+        altKey: "projects.spendwise.images.scan.alt",
+        alt: "Scanner de tickets",
+        captionKey: "projects.spendwise.images.scan.caption",
+        caption: "Interface de scan et analyse des tickets de caisse"
       }
+
     ],
     date: "2025-02"
   },
