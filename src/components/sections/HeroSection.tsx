@@ -8,7 +8,7 @@ const HeroSection = () => {
   const { theme } = useTheme();
   
   const animationOptions = useMemo(() => ({
-    color: theme === 'light' ? 0x00B383 : 0x00ffb9,
+    color: theme === 'light' ? 0x8A2BE2 : 0x00ffb9,
     wireframe: true,
     rotationSpeed: 0.001
   }), [theme]);

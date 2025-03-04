@@ -59,7 +59,7 @@
         }
       },
       "growth": {
-        "title": "Croissance & Automatisation",
+        "title": "Prospection & Automatisation",
         "description": "Croissance commerciale et automatisation des processus",
         "features": {
           "scraping": "Génération de leads",
@@ -264,7 +264,7 @@
     "description": "Travaillons ensemble sur votre prochain projet",
     "social": {
       "linkedin": "Connectons nous sur LinkedIn pour échanger sur votre projet",
-      "github": "Découvrir mes projets sur GitHub",
+      "github": "",
       "consultation": {
         "title": "Échangeons par téléphone",
         "description": "Réservez un appel de 30 minutes pour discuter de vos besoins et explorer les solutions possibles",

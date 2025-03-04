@@ -9,7 +9,7 @@ export const CONTACT_INFO = {
   },
   social: {
     linkedinMessage: "Connectons nous sur LinkedIn pour échanger sur votre projet",
-    githubMessage: "Découvrir mes projets sur GitHub"
+    githubMessage: ""
   }
 };
 

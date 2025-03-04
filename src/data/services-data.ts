@@ -10,18 +10,19 @@ export interface Service {
 }
 
 const servicesList: Service[] = [
-  {
-    titleKey: "services.list.cloud.title",
-    icon: Cloud,
-    descriptionKey: "services.list.cloud.description",
+    {
+    titleKey: "services.list.ai.title",
+    icon: Bot,
+    descriptionKey: "services.list.ai.description",
     featuresKeys: [
-      "services.list.cloud.features.webapps",
-      "services.list.cloud.features.cognitive",
-      "services.list.cloud.features.infrastructure",
-      "services.list.cloud.features.containers"
+        "services.list.ai.features.agents",
+        "services.list.ai.features.voice",
+        "services.list.ai.features.automation",
+        "services.list.ai.features.decision"
     ],
-    technologies: ["Azure Web Apps", "Azure Functions", "Azure Document Intelligence", "Azure VM"]
-  },
+    technologies: ["OpenAI", "HuggingFace", "LiveKit", "Elevenlabs", "Langchain", "Autogen", "CrewAI"]
+    },
+
   {
     titleKey: "services.list.scraping.title",
     icon: Code,
@@ -46,18 +47,7 @@ const servicesList: Service[] = [
     ],
     technologies: ["BigQuery", "PowerBI", "Looker", "Python", "SQL"]
   },
-  {
-    titleKey: "services.list.ai.title",
-    icon: Bot,
-    descriptionKey: "services.list.ai.description",
-    featuresKeys: [
-      "services.list.ai.features.agents",
-      "services.list.ai.features.voice",
-      "services.list.ai.features.automation",
-      "services.list.ai.features.decision"
-    ],
-    technologies: ["OpenAI", "HuggingFace", "LiveKit", "Elevenlabs", "Langchain", "Autogen", "CrewAI"]
-  },
+
   {
     titleKey: "services.list.growth.title",
     icon: ArrowRight,
@@ -68,7 +58,7 @@ const servicesList: Service[] = [
       "services.list.growth.features.conversion",
       "services.list.growth.features.segmentation"
     ],
-    technologies: ["PhantomBuster", "La Growth Machine", "Sales Navigator", "Web Scraping", "Zapier"]
+    technologies: ["Lemlist", "La Growth Machine", "Sales Navigator", "Web Scraping", "Zapier", "Make"]
   },
   {
     titleKey: "services.list.crm.title",
@@ -81,7 +71,19 @@ const servicesList: Service[] = [
       "services.list.crm.features.optimization"
     ],
     technologies: ["HubSpot", "Airtable", "Jira", "Notion", "Asana", "Monday"]
-  }
+  },
+  {
+    titleKey: "services.list.cloud.title",
+    icon: Cloud,
+    descriptionKey: "services.list.cloud.description",
+    featuresKeys: [
+      "services.list.cloud.features.webapps",
+      "services.list.cloud.features.cognitive",
+      "services.list.cloud.features.infrastructure",
+      "services.list.cloud.features.containers"
+    ],
+    technologies: ["Azure Web Apps", "Azure Functions", "Azure Document Intelligence", "Azure VM"]
+  },
 ];
 
 export const useServices = () => {
