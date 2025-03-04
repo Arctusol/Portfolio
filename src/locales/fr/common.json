@@ -7,8 +7,10 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Solutions Digitales & Innovantes",
-    "subtitle": "Expert en Data Analyse, IA Générative & Automatisation",
+    "_title": "Solutions Digitales & Innovantes",
+    "_subtitle": "Expert en Data Analyse, IA Générative & Automatisation",
+    "title": "Bienvenue sur mon profil",
+    "subtitle": "Je m'appelle Antonin, expert en intelligence artificielle et en science des données. Passionné par l'innovation technologique, j'ai développé de nombreuses solutions basées sur l'IA générative pour transformer des idées complexes en applications concrètes et efficaces.",
     "cta": {
       "services": "Découvrir mes services",
       "contact": "Me contacter"

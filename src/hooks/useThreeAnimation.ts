@@ -39,12 +39,12 @@ const useThreeAnimation = (options: ThreeAnimationOptions = {}) => {
     const ambientLight = new THREE.AmbientLight(0x404040);
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(color, 2);
+    const directionalLight = new THREE.DirectionalLight(color, 3);
     directionalLight.position.set(1, 1, 1);
     scene.add(directionalLight);
 
     // Geometry
-    const geometry = new THREE.SphereGeometry(2.1, 64, 64);
+    const geometry = new THREE.SphereGeometry(2, 64, 64);
     const material = new THREE.MeshPhongMaterial({
       color,
       wireframe,
@@ -52,7 +52,7 @@ const useThreeAnimation = (options: ThreeAnimationOptions = {}) => {
     const sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
 
-    camera.position.z = 5;
+    camera.position.z = 6;
 
     // Animation
     const animate = () => {

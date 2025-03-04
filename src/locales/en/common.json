@@ -7,8 +7,10 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Digital & Innovative Solutions",
-    "subtitle": "Expert in Data Analysis, Generative AI & Automation",
+    "_title": "Digital & Innovative Solutions",
+    "_subtitle": "Expert in Data Analysis, Generative AI & Automation",
+    "title": "Welcome to my profile",
+    "subtitle": "I'm Antonin, an expert in artificial intelligence and data science. Passionate about technological innovation, I've developed numerous solutions powered by generative AI to transform complex ideas into concrete, efficient applications.",
     "cta": {
       "services": "Discover my services",
       "contact": "Contact me"

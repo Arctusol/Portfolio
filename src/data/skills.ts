@@ -9,17 +9,17 @@ export const skillsData: SkillWithUseCases[] = [
     useCases: [
       {
         description: "APIs haute performance FastAPI",
-        projectCount: 8,
+        projectCount: 5,
         details: "REST, WebSockets, architectures microservices"
       },
       {
         description: "Automatisation Python",
-        projectCount: 15,
+        projectCount: 9,
         details: "Scripts, web scraping, intégrations"
       },
       {
         description: "Solutions Cloud Native",
-        projectCount: 10,
+        projectCount: 5,
         details: "Azure, Docker, Kubernetes"
       }
     ]
@@ -31,17 +31,17 @@ export const skillsData: SkillWithUseCases[] = [
     useCases: [
       {
         description: "Applications React modernes",
-        projectCount: 12,
+        projectCount: 6,
         details: "SPA, SSR avec Next.js, TailwindCSS"
       },
       {
         description: "Interfaces TypeScript",
-        projectCount: 10,
+        projectCount: 6,
         details: "Types stricts, meilleure maintenabilité"
       },
       {
         description: "Déploiement Vercel",
-        projectCount: 8,
+        projectCount: 3,
         details: "CI/CD, optimisation des performances"
       }
     ]
@@ -53,17 +53,17 @@ export const skillsData: SkillWithUseCases[] = [
     useCases: [
       {
         description: "Intégrations LLM avancées",
-        projectCount: 8,
+        projectCount: 7,
         details: "OpenAI, Anthropic, modèles personnalisés"
       },
       {
         description: "Agents autonomes",
-        projectCount: 6,
+        projectCount: 2,
         details: "Autogen, CrewAI, orchestration"
       },
       {
         description: "Solutions vocales",
-        projectCount: 4,
+        projectCount: 1,
         details: "Elevenlabs, Deepgram, reconnaissance vocale"
       }
     ]
@@ -75,17 +75,17 @@ export const skillsData: SkillWithUseCases[] = [
     useCases: [
       {
         description: "Scraping à grande échelle",
-        projectCount: 20,
+        projectCount: 10,
         details: "Selenium, BeautifulSoup, monitoring de prix"
       },
       {
         description: "Automatisation complexe",
-        projectCount: 15,
+        projectCount: 3,
         details: "Make, Zapier, intégrations multi-services"
       },
       {
         description: "Collecte de données structurées",
-        projectCount: 18,
+        projectCount: 12,
         details: "APIs, bases de données, transformation"
       }
     ]
@@ -97,17 +97,17 @@ export const skillsData: SkillWithUseCases[] = [
     useCases: [
       {
         description: "Architecture Cloud Native",
-        projectCount: 12,
+        projectCount: 5,
         details: "Web Apps, Functions, Containers"
       },
       {
         description: "Services cognitifs",
-        projectCount: 8,
+        projectCount: 6,
         details: "Form Recognizer, Computer Vision, LLMs"
       },
       {
         description: "Infrastructure as Code",
-        projectCount: 10,
+        projectCount: 2,
         details: "Terraform, ARM templates, automatisation"
       }
     ]
@@ -129,7 +129,7 @@ export const skillsData: SkillWithUseCases[] = [
       },
       {
         description: "Analyse prédictive",
-        projectCount: 6,
+        projectCount: 2,
         details: "Machine Learning, séries temporelles"
       }
     ]
